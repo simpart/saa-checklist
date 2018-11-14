@@ -1,0 +1,14 @@
+{
+    "VPC (Virtual Private Cloud)" : {},
+    "EC2 (Elastic Compute Cloud)" : {},
+    "ELB (Elastic Load Balancer)" : {},
+    "S3 (Simple Storage Service)" : {},
+    "EBS (Elastic Block Store)" : {},
+    "RDS (Relational Database Service)" : {},
+    "CloudWatch" : {},
+    "DynamoDB" : {},
+    "Route53" : {},
+    "IAM (Identity and Access Management)" : {},
+    "Service" : {},
+    "Other" : {}
+}
