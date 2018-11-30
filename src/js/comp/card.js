@@ -110,7 +110,7 @@ try {
                 let ret = new TurnCard({
                     contsTxt : [ telm.treeKey(), telm.treeValue() ],
                     textComp : new mf.Option({
-                        size      : '0.3rem',
+                        size      : '0.2rem',
                         style     : {
                             'margin-top'  : ('mobile' === mofron.func.devType()) ? '0.2rem' : '0.15rem',
                             'margin-left' :  '0.2rem'

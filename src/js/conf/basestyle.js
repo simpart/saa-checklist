@@ -19,7 +19,7 @@ try {
             },
             mobile  : {
                 horizon  : { 'font-size' : '1250%' },
-                vertical : { 'font-size' : '1400%' }
+                vertical : { 'font-size' : '1250%' }
             },
             tablet  : {
                 horizon  : { 'font-size' : '625%' },

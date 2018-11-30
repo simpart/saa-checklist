@@ -43,7 +43,7 @@ let start = () => {
                             baseColor : 'white',
                             effect    : new Shadow('0.1rem')
                         }),
-            baseColor : [245,245,245],
+            baseColor : [248,248,253],
             layout    : [
                 new HrzCent(
                     ('mobile' !== mofron.func.devType()) ? 50 : 99
@@ -53,7 +53,7 @@ let start = () => {
             child     : new Tree({
                 layout         : new Margin('top', '0.2rem'),
                 effect         : [ new Fade([10, 400]) ],
-                naviText       : new mf.Option({ size : '0.25rem' }),
+                naviText       : new mf.Option({ size : '0.2rem' }),
                 backEvent      : card.back,
                 nextEvent      : card.next,
                 indexElem_func : card.index,
