@@ -69,7 +69,7 @@ let start = () => {
                 throw e;
             }
         }
-        ttrg.rest.get('./conf/list.json', null, load);
+        ttrg.rest.get('./list.json', null, load);
         
         return ret;
     } catch (e) {

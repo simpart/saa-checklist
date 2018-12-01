@@ -9,6 +9,7 @@ const VisiClk = require('mofron-event-visiclick');
 const Click = require('mofron-event-click');
 const Hover = require('mofron-event-hover');
 const HrzPos = require('mofron-effect-hrzpos');
+const Font = require('mofron-effect-font');
 
 const TurnCard = require('./TurnCard.js');
 
@@ -60,7 +61,10 @@ try {
                                 'margin-top',
                                 ('mobile' === mofron.func.devType()) ? '0.2rem' : '0.15rem'
                             ],
-                            effect    : [ new HrzPos('center') ]
+                            effect    : [
+                                new HrzPos('center'),
+                                new Font('"M PLUS Rounded 1c"')
+                            ]
                         })
                     ],
                     event   : [
@@ -88,13 +92,11 @@ try {
                 if ( ('mobile' === mofron.func.devType()) && (33 < telm.treeKey().length) ) {
                     ret.height('1.6rem');
                     ret.child()[0].style({ 'margin-top' : '0.4rem' });
-                } //else if () {
+                } 
                     
-                //}
                 
                 /* effect config */
                 ret.effect('Fade').delay(0, 100);
-                //ret.effect('Border').color([252,252,253]);
                 
                 if ('back' === thisobj.mode) {
                     ret.flow().execOption({ value : ['-0.2rem', '0.2rem'] });
@@ -114,7 +116,8 @@ try {
                         style     : {
                             'margin-top'  : ('mobile' === mofron.func.devType()) ? '0.2rem' : '0.15rem',
                             'margin-left' :  '0.2rem'
-                        }
+                        },
+                        effect : [ new Font('"M PLUS Rounded 1c"') ]
                     }),
                     event   : [
                         new Hover(
@@ -132,9 +135,9 @@ try {
                             }
                         )
                     ],
-                    size    : [ '100%', '0.8rem' ],
-                    mainColor   : [252,252,253],
-                    flow    : new mf.Option({ speed : 100 })
+                    size      : [ '100%', '0.6rem' ],
+                    mainColor : [252, 252, 253],
+                    flow      : new mf.Option({ speed : 100 })
                 });
                 
                 return ret;

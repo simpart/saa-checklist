@@ -54,9 +54,14 @@ mf.comp.TurnCard = class extends FlowFrame {
                     t1_cmp.isBack(!t1_cmp.isBack());
                     
                     let txt_len = t1_cmp.contsTxt()[(true === t1_cmp.isBack()) ? 1 : 0].length;
-                    t1_cmp.getResizer().forcedExec(
-                        (20 < txt_len) ? true : false
-                    );
+
+                    if (70 < txt_len) {
+                        t1_cmp.height('1.8rem');
+                    } else {
+                        t1_cmp.getResizer().forcedExec(
+                            (34 < txt_len) ? true : false
+                        );
+                    }
                     t1_cmp.mainColor(
                         (true === t1_cmp.isBack()) ? [230,245,250] : [252,252,253]
                     );
@@ -82,7 +87,7 @@ mf.comp.TurnCard = class extends FlowFrame {
             if (undefined === this.m_resizer) {
                 this.m_resizer = new Size({
                     suspend : true,
-                    height  : [ '1.2rem', '0.8rem' ],
+                    height  : [ '0.9rem', '0.6rem' ],
                 });
             }
             return this.m_resizer;
@@ -114,7 +119,9 @@ mf.comp.TurnCard = class extends FlowFrame {
             }
             if ('string' === typeof frt) {
                 this.m_cnttxt[0] = frt;
-                if (20 < frt.length) {
+                if (70 < frt.length) {
+                    t1_cmp.height('1.8rem');
+                } else if (34 < frt.length) {
                     this.getResizer().forcedExec(true);
                 }
             }

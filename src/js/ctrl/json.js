@@ -14,7 +14,6 @@ const Click = require('mofron-event-click');
 const Flowmgn = require('mofron-effect-flowmgn');
 
 const FlowFrame = require('mofron-comp-flowframe');
-const IndexCard = require('../comp/IndexCard.js');
 const VisiClk = require('mofron-event-visiclick');
 
 const card = require('../comp/card.js');
