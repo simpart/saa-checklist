@@ -114,7 +114,7 @@ try {
                     textComp : new mf.Option({
                         size      : '0.2rem',
                         style     : {
-                            'margin-top'  : ('mobile' === mofron.func.devType()) ? '0.2rem' : '0.15rem',
+                            'margin-top'  : ('mobile' === mofron.func.devType()) ? '0.15rem' : '0.15rem',
                             'margin-left' :  '0.2rem'
                         },
                         effect : [ new Font('"M PLUS Rounded 1c"') ]
