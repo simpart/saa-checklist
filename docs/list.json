@@ -503,6 +503,7 @@
       "サービス概要" : "Hadoopサービス",
       "ユーザが意識するのは__??__, __??__" : "Map, Reduce"
     },
+    "Cognito" : "アプリケーションの認証、許可、ユーザ管理",
     "SES" : "メール送信",
     "ECS(Elastic Container Service)" : "コンテナ管理サービス",
     "EFS(Elastic File System)" : "EC2と連携可能なファイルストレージサービス",
