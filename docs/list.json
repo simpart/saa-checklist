@@ -503,6 +503,7 @@
       "サービス概要" : "Hadoopサービス",
       "ユーザが意識するのは__??__, __??__" : "Map, Reduce"
     },
+    "EFS(Elastic File System)" : "EC2と連携可能なファイルストレージサービス",
     "Elastic Beanstalk" : "Webアプリの自動デプロイ",
     "OpsWorks" : "chefのサービス",
     "Directory Service" : "Active Directoryのサービス",
