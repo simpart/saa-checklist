@@ -516,7 +516,7 @@
     "Elastic Beanstalk" : "Webアプリの自動デプロイ",
     "OpsWorks" : "chefのサービス",
     "Directory Service" : "Active Directoryのサービス",
-    "Security Token Service" : "LDAP連携など",
+    "STS(Security Token Service)" : "ユーザーに対する一時的なセキュリティ認証",
     "Kinesiss" : "ストリーミングデータ処理",
     "WorkSpaces" : "仮想デスクトップ環境"
   },
