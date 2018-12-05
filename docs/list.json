@@ -435,7 +435,7 @@
     "１アカウント毎に__??__個の証明書が有効" : "20個"
   },
   "その他サービス" : {
-    "SWF(simple workflow)" : {
+    "SWF (simple workflow)" : {
       "サービス概要" : "ワークフローの作成",
       "リザーブドインスタンスは__対象/対象外__" : "対象外"
     },
@@ -478,7 +478,7 @@
       "__??__のデータをインポート可能" : "EBS,S3,Glacier",
       "__??__のデータをエクスポート可能" : "S3"
     },
-    "SQS" : {
+    "SQS (Simple Queue Service)" : {
       "サービス概要" : "メッセージキュー",
       "最小__??__ - 最大__??__ データサイズ" : "1kb, 256kb",
       "同じメッセージが複数回配信される可能性は__(ある/ない)__" : "ある",
@@ -492,7 +492,7 @@
         "ChangeMessageVisibility" : "タイムアウト変更"
       }
     },
-    "SNS" : {
+    "SNS (Simple Notification Service)" : {
       "サービス概要" : "メッセージ送信",
       "トピック" : "メッセージをやりとりするためのチャネル",
       "トピック名は最大__??__文字" : "256文字",
@@ -514,13 +514,13 @@
     },
     "RedShift" : "高速でシンプルなデータウエアハウス",
     "Cognito" : "アプリケーションの認証、許可、ユーザ管理",
-    "SES" : "メール送信",
-    "ECS(Elastic Container Service)" : "コンテナ管理サービス",
-    "EFS(Elastic File System)" : "EC2と連携可能なファイルストレージサービス",
+    "SES (Simple Email Service)" : "メール送信",
+    "ECS (Elastic Container Service)" : "コンテナ管理サービス",
+    "EFS (Elastic File System)" : "EC2と連携可能なファイルストレージサービス",
     "Elastic Beanstalk" : "Webアプリの自動デプロイ",
     "OpsWorks" : "chefのサービス",
     "Directory Service" : "Active Directoryのサービス",
-    "STS(Security Token Service)" : "ユーザーに対する一時的なセキュリティ認証",
+    "STS (Security Token Service)" : "ユーザーに対する一時的なセキュリティ認証",
     "Kinesiss" : "ストリーミングデータ処理",
     "WorkSpaces" : "仮想デスクトップ環境"
   },
