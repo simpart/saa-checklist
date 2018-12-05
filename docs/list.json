@@ -518,6 +518,7 @@
     "SES (Simple Email Service)" : "メール送信",
     "ECS (Elastic Container Service)" : "コンテナ管理サービス",
     "EFS (Elastic File System)" : "EC2と連携可能なファイルストレージサービス",
+    "ElastiCache" : "Key-Valueストアなインメモリキャッシュサービス",
     "Elastic Beanstalk" : "Webアプリの自動デプロイ",
     "OpsWorks" : "chefのサービス",
     "Directory Service" : "Active Directoryのサービス",
