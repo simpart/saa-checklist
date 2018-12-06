@@ -5,29 +5,66 @@
 const mf = require('mofron');
 require('expose-loader?app!../conf/namesp.js');
 require('tetraring4js');
-
+/* component */
 const Appbs = require('mofron-comp-appbase');
-const TreeIF = require('mofron-comp-treeif');
-const Tree = require('mofron-comp-dev');
+const Tree  = require('mofron-comp-sptree');
+const Frame = require('mofron-comp-flowframe');
+const Text  = require('mofron-comp-text');
+const Icon  = require('mofron-comp-dev');
+/* layout */
 const HrzCent = require('mofron-layout-hrzcenter');
-const Margin = require('mofron-layout-margin');
+const Margin  = require('mofron-layout-margin');
+/* effect */
 const HrzPos = require('mofron-effect-hrzpos');
 const Shadow = require('mofron-effect-shadow');
-const Fade = require('mofron-effect-fade');
-const Frame = require('mofron-comp-flowframe');
-
-const Text = require('mofron-comp-text');
-const Header = require('mofron-comp-txtheader');
-
-const OrdView = require('mofron-effect-orderview');
-const Click = require('mofron-event-click');
-const VisiClk = require('mofron-event-visiclick');
-
+const Fade   = require('mofron-effect-fade');
 /* app ctrl */
 const theme = require('../conf/theme.js');
-const base = require('../conf/basestyle.js');
-const json = require('../ctrl/json.js');
-const card = require('../comp/card.js');
+const base  = require('../conf/basestyle.js');
+//const scr   = require('../ctrl/screen.js');
+const card  = require('../comp/card.js');
+
+let tree = new Tree({
+    layout         : new Margin('top', '0.2rem'),
+    effect         : new Fade([10, 400]),
+    naviText       : new mf.Option({ size : '0.2rem' }),
+    backEvent      : card.back,
+    nextEvent      : card.next,
+    indexElem_func : card.index,
+    kvElem_func    : card.keyVal
+});
+
+let appbase = new Appbs({
+    header    : new mf.Option({
+        logo      : [ './check_ico.png', '-0.1rem' ],
+        title     : new Text({
+            text    : 'AWS SAA CheckList',
+            font    : '"M PLUS Rounded 1c"'
+        }),
+        baseColor : 'white',
+        effect    : new Shadow('0.1rem'),
+        //navi      : scr.get()
+    }),
+    baseColor : [248, 248, 253],
+    layout    : new HrzCent( ('mobile' !== mofron.func.devType()) ? 50 : 100),
+    effect    : new Fade(),
+    child     : [
+        tree,
+        new mf.Component(
+            new Icon({
+                basePrefix : 'fab',
+                icon       : 'github',
+                url        : 'https://github.com/simpart/saa-checklist',
+                effect     : [ new HrzPos('center') ],
+                sizeValue  : [ "margin", "0.2rem" ]
+            })
+        )
+    ]
+});
+
+//backEvent
+
+//let 
 
 /**
  * build component contents
@@ -36,33 +73,9 @@ const card = require('../comp/card.js');
  */
 let start = () => {
     try {
-        /* defined contents */
-        let ret = new Appbs({
-            title     : "SAA Check List",
-            header    : new mf.Option({
-                            baseColor : 'white',
-                            effect    : new Shadow('0.1rem')
-                        }),
-            baseColor : [248,248,253],
-            layout    : [
-                new HrzCent(
-                    ('mobile' !== mofron.func.devType()) ? 50 : 99
-                )
-            ],
-            effect    : new Fade(),
-            child     : new Tree({
-                layout         : new Margin('top', '0.2rem'),
-                effect         : [ new Fade([10, 400]) ],
-                naviText       : new mf.Option({ size : '0.2rem' }),
-                backEvent      : card.back,
-                nextEvent      : card.next,
-                indexElem_func : card.index,
-                kvElem_func    : card.keyVal
-            })
-        });
+        let ret = appbase;
         
         /* load tree contetns */
-        let tree = ret.child()[0];
         let load = (p1) => {
             try { tree.load(p1); } catch (e) {
                 console.error(e.stack);
@@ -86,7 +99,6 @@ try {
     );
 
     theme.init(app.root);
-console.log(app.root);
     app.root.visible(true);
     
 } catch (e) {

@@ -59,24 +59,22 @@ try {
                             size      : '0.3rem',
                             sizeValue : [
                                 'margin-top',
-                                ('mobile' === mofron.func.devType()) ? '0.2rem' : '0.15rem'
+                                ('mobile' === mofron.func.devType()) ? '0.15rem' : '0.15rem'
                             ],
-                            effect    : [
-                                new HrzPos('center'),
-                                new Font('"M PLUS Rounded 1c"')
-                            ]
+                            font      : '"M PLUS Rounded 1c"',
+                            effect    : [ new HrzPos('center') ]
                         })
                     ],
                     event   : [
                         new Click((p1) => { p1.mainColor([190, 225,230]) }),
                         new Hover(
-                            (h1_frm,h2,h3_flg) => {
+                            (h1_frm, h2_flg) => {
                                 try {
                                     let shd = h1_frm.effect('Shadow');
                                     shd.execOption({
-                                        value : (true === h3_flg) ? '0.1rem' : '0rem'
+                                        value : (true === h2_flg) ? '0.1rem' : '0rem'
                                     });
-                                    shd.forcedExec(h3_flg);
+                                    shd.forcedExec(h2_flg);
                                 } catch (e) {
                                     console.error(e.stack);
                                     throw e;
@@ -117,17 +115,17 @@ try {
                             'margin-top'  : ('mobile' === mofron.func.devType()) ? '0.15rem' : '0.15rem',
                             'margin-left' :  '0.2rem'
                         },
-                        effect : [ new Font('"M PLUS Rounded 1c"') ]
+                        font      : '"M PLUS Rounded 1c"'
                     }),
                     event   : [
                         new Hover(
-                            (h1_frm,h2,h3_flg) => {
+                            (h1_frm, h2_flg) => {
                                 try {
                                     let shd = h1_frm.effect('Shadow');
                                     shd.execOption({
-                                        value : (true === h3_flg) ? '0.1rem' : '0rem'
+                                        value : (true === h2_flg) ? '0.1rem' : '0rem'
                                     });
-                                    shd.forcedExec(h3_flg);
+                                    shd.forcedExec(h2_flg);
                                 } catch (e) {
                                     console.error(e.stack);
                                     throw e;
